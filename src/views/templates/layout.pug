@@ -5,9 +5,24 @@ doctype
 html(lang="es")
   head
     meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="robots", content="index, follow")
+    link(rel="icon", type="image/x-icon", href="img/favicon.ico")
+
     title #{pageTitle}
 
   body
     block main
-    link(rel="stylesheet",href="/css/estilos.css")
+    link(rel="stylesheet",href="css/estilos.css")
     script(src='js/scripts.js')
+    script(type='text/javascript').
+      WebFontConfig = {
+      google: { families: [ 'Roboto:300,400,500'] } };
+      (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+      })();

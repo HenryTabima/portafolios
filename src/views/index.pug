@@ -1,12 +1,15 @@
 extends templates/layout
 
 block append config
-  - var pageTitle = "Inicio"
+  - var pageTitle = "Henry Tabima Giraldo - Desarrollador Web"
 
 block main
 
   include templates/header
-
-  p just test text
+  section.main-content
+    .row.center-xs
+      .col-xs-12.col-sm-10.col-md-8
+        #experiencia
+          
 
   include templates/footer
