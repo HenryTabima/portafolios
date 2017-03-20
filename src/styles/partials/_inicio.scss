@@ -4,6 +4,9 @@
 row {
   box-sizing: border-box!important;
 }
+.ticon {
+  margin-right: 8px;
+}
 header {
   .topbar {
     background-color: $main-color;
@@ -14,11 +17,8 @@ header {
       padding: 0;
       background-color: $main-color-darker1;
       color: white;
-      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
       font-size: 14px;
-      i {
-        margin-right: 8px;
-      }
       @media screen and (min-width: $md-breakpoint){
         width: auto;
         padding: 3px 20px;
@@ -120,9 +120,6 @@ header {
       li {
         display: inline-block;
         margin: 0 15px;
-        i{
-          margin-right: 8px;
-        }
       }
     }
   }
@@ -133,6 +130,7 @@ header {
     }
   }
   nav.navegacion {
+    box-shadow: 0 5px 5px #000;
     background-color: $main-color-darker3;
     padding: 20px 0;
     ul {
@@ -149,13 +147,6 @@ header {
         }
       }
     }
-    &.fixed {
-      background-color: $main-color;
-      position: fixed;
-      top: 0;
-      width: 100vw;
-      transition: background-color 1s;
-    }
     @media screen and (max-width: $sm-breakpoint) {
       display: none;
     }
@@ -165,4 +156,105 @@ section.main-content {
   background-color: $main-base;
   padding: 60px 0;
   min-height: 1000px;
+  .section {
+    padding: 45px;
+    @media screen and (max-width: $sm-breakpoint){
+      padding: 30px;
+    }
+  }
+  .section-title {
+    margin: 0 0 45px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 500;
+  }
+  #experiencia {
+    background-color: white;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+    .timeline {
+      margin-left: 280px;
+      padding: 0 30px;
+      border-left: 3px solid $main-color;
+      border-bottom-right-radius: 2px;
+      border-top-right-radius: 2px;
+      position: relative;
+      text-align: left;
+      .item {
+        position: relative;
+        margin-bottom: 45px;
+        &:before {
+          box-sizing: border-box;
+          content: "";
+          position: absolute;
+          left: -43px;
+          top: 0;
+          display: inline-block;
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          background-clip: padding-box;
+          background: #fff;
+          border: 3px solid #673AB7;
+        }
+        &:after {
+          box-sizing: border-box;
+          content: "";
+          position: absolute;
+          left: -37px;
+          top: 6px;
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-clip: padding-box;
+          background: #673AB7;
+          z-index: 10;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .work-place {
+          position: relative;
+        }
+        .place {
+          margin-top: 0;
+          margin-bottom: 15px;
+          font-size: 20px;
+          font-weight: 300;
+          line-height: 22px;
+        }
+        .location {
+          position: absolute;
+          right: 0;
+          top: 2px;
+          color: #8a8a8a;
+        }
+        .job-meta {
+          position: absolute;
+          left: -280px;
+          top: 0;
+          margin-bottom: 15px;
+          max-width: 230px;
+          .title {
+            font-size: 18px;
+            color: #673AB7;
+          }
+          .time {
+            color: #8a8a8a;
+          }
+        }
+        .job-desc {
+          text-align: justify;
+          color: #666;
+        }
+      }
+      @media screen and (max-width: $md-breakpoint){
+        padding-right: 0;
+        margin-left: 0;
+        .job-meta {
+          position: static!important;
+        }
+      }
+    }
+  }
 }

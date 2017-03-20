@@ -46,5 +46,7 @@
 
 	"use strict";
 
+	smoothScroll.init();
+
 /***/ }
 /******/ ]);

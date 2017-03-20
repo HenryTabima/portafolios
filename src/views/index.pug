@@ -8,8 +8,21 @@ block main
   include templates/header
   section.main-content
     .row.center-xs
-      .col-xs-12.col-sm-10.col-md-8
-        #experiencia
-          
+      .col-xs-11.col-sm-9.col-md-8.col-lg-7
+        #experiencia.section
+          h2.section-title Experiencia Laboral
+          .timeline
+            .item
+              .work-place
+                h3.place Indomotech SAS
+                .location
+                  i.fa.fa-map-marker.ticon(aria-hidden='true')
+                  | Cali
+              .job-meta
+                .title Director de proyectos de software
+                .time Enero de 2016 - Presente
+              .job-desc
+                p
+                  | Desarrollo de pagina web de la empresa, Desarrollador de paginas y aplicativos web, Programador de la Interfaz de usuario en domotica, Programador de interfaz de en integraciones de Audio y Video
 
   include templates/footer
