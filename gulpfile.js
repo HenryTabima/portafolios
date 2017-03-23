@@ -87,7 +87,7 @@ gulp.task('serve', ['build'], function () {
 gulp.task('watch', ['serve'], function () {
   gulp.watch(['src/styles/**/*.scss'], ['sass'])
   gulp.watch(['src/views/**/*.pug'], ['views'])
-  gulp.watch(['src/scripts/**/*.js'], ['webpack'])
+  gulp.watch(['src/scripts/**/*.js'], ['webpack', 'concat'])
 })
 
 gulp.task('build', ['set-development', 'views', 'sass', 'webpack', 'concat', 'assets'])

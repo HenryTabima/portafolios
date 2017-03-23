@@ -1,11 +1,23 @@
-*{
+body {
   font-family: 'Roboto', sans-serif;
+  font-size: 14px;
 }
 row {
   box-sizing: border-box!important;
 }
 .ticon {
   margin-right: 8px;
+}
+#volver-arriba {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: $main-color!important;
+  color: white;
+  line-height: 42px;
+  min-width: inherit;
+  width: 45px!important;
+  height: 45px;
 }
 header {
   .topbar {
@@ -19,6 +31,10 @@ header {
       color: white;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
       font-size: 14px;
+      transition: display 1s;
+      &.hidden {
+        display: none;
+      }
       @media screen and (min-width: $md-breakpoint){
         width: auto;
         padding: 3px 20px;
@@ -155,9 +171,11 @@ header {
 section.main-content {
   background-color: $main-base;
   padding: 60px 0;
-  min-height: 1000px;
   .section {
+    background-color: white;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
     padding: 45px;
+    margin-bottom: 45px;
     @media screen and (max-width: $sm-breakpoint){
       padding: 30px;
     }
@@ -169,8 +187,6 @@ section.main-content {
     font-weight: 500;
   }
   #experiencia {
-    background-color: white;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
     .timeline {
       margin-left: 280px;
       padding: 0 30px;
@@ -254,6 +270,64 @@ section.main-content {
         .job-meta {
           position: static!important;
         }
+      }
+    }
+  }
+  #educacion {
+    font-size: 14px;
+    .item-inner {
+      padding: 0 30px;
+      margin-bottom: 45px;
+      text-align: justify;
+      @media screen and (max-width: $sm-breakpoint){
+        padding: 0 10px;
+      }
+    }
+    .degree {
+      font-size: 18px;
+      color: #673AB7;
+      margin-top: 0;
+      margin-bottom: 0px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+    .education-body {
+      font-weight: 500;
+      margin-bottom: 0px;
+      font-size: 16px;
+      font-weight: 300;
+    }
+    .time {
+      color: #8a8a8a;
+      margin-bottom: 15px;
+    }
+    .desc {
+      color: #666;
+    }
+  }
+  #habilidades {
+    .section-title {
+      margin-bottom: 10px;
+    }
+    .top-skills {
+      margin-bottom: 60px;
+    }
+    .subtitle {
+      font-size: 18px;
+      color: #8a8a8a;
+      margin-top: 0;
+      margin-bottom: 45px;
+      font-weight: 300;
+    }
+    .chart {
+      position: relative;
+      span {
+        position: absolute;
+        left: 46%;
+        font-size: 20px;
+        color: #444;
+        line-height: 110px;
+        font-weight: 300;
       }
     }
   }
