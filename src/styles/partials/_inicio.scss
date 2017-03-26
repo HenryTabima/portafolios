@@ -309,7 +309,7 @@ section.main-content {
     .section-title {
       margin-bottom: 10px;
     }
-    .top-skills {
+    .skills {
       margin-bottom: 60px;
     }
     .subtitle {
@@ -323,12 +323,65 @@ section.main-content {
       position: relative;
       span {
         position: absolute;
-        left: 46%;
+        left: 50%;
+        transform: translateX(-50%);
         font-size: 20px;
         color: #444;
         line-height: 110px;
         font-weight: 300;
       }
+    }
+    .item-inner {
+      padding: 0 20px;
+      margin-bottom: 45px;
+    }
+    .desc {
+      color: #666;
+    }
+    .skill-tag {
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+      padding: 6px 30px;
+      display: inline-block;
+      margin: 0 5px 15px;
+      border: 1px solid #f5f5f5;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+  #portafolio {
+    .demo-card-square.mdl-card {
+      height: 320px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .demo-card-square > .mdl-card__title {
+      color: rgba(0, 0, 0,0.5);
+      background: #fff;
+      border-bottom: 1px solid rgba(0 , 0, 0, 0.1);
+    }
+    .card-image {
+      position: absolute;
+      left: 50%;
+      top: 20%;
+      transform: translate(-50%, -50%);
+      max-width: 60%;
+      max-height: 50%;
+    }
+    .mdl-card__actions {
+      background-color: $main-color-darker1;
+      a {
+        color: white;
+        &:hover {
+          background-color: $main-color-darker2;
+        }
+      }
+    }
+    .mdl-card__supporting-text {
+      height: 64px;
+      text-align: justify;
+      width: auto;
+      background-color: $main-color;
+      color: #fff;
     }
   }
 }

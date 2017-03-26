@@ -47,12 +47,91 @@ block main
 
         #habilidades.section
           h2.section-title Habilidades
-          .top-skills
+
+          .skills
             h3.subtitle TOP SKILLS
             .row.center-xs
               .col-xs-12.col-sm-6.col-md-4
                 .item-inner
                   .chart(data-percent="85")
                     span 85%
+                  h4.skill-name PHP & Laravel
+                  .desc Programacion de aplicaiones web con PHP utilizando el framework Laravel
+              .col-xs-12.col-sm-6.col-md-4
+                .item-inner
+                  .chart(data-percent="90")
+                    span 90%
+                  h4.skill-name Javascript & NodeJS
+                  .desc Programacion de aplicaiones web con Javascript utilizando NodeJS
+              .col-xs-12.col-sm-6.col-md-4
+                .item-inner
+                  .chart(data-percent="80")
+                    span 80%
+                  h4.skill-name React
+                  .desc Programacion de Frontend con webcomponent utilizando React
+
+          .skills
+            h3.subtitle Other Skills
+            .row.center-xs
+              .col-xs-12.col-sm-10.col-md-8
+                span.skill-tag HTML5
+                span.skill-tag CSS3
+                span.skill-tag Git
+                span.skill-tag GitHub
+                span.skill-tag Phyton
+                span.skill-tag Ruby
+                span.skill-tag Jade/Pug
+                span.skill-tag Gulp
+                span.skill-tag Linux & Terminal
+                span.skill-tag Sass
+                span.skill-tag Frontend frameworks
+                span.skill-tag Responsive Design
+                span.skill-tag Machine Learning
+                span.skill-tag Control & Automatización
+
+        #portafolio.section
+          h2.section-title Portafolio
+          .row.center-xs
+            .col-xs-12.col-sm-6.col-md-4.col-lg-3
+              .demo-card-square.mdl-card.mdl-shadow--2dp
+                .mdl-card__title.mdl-card--expand
+                  img(src="/img/henry.png", alt="").card-image
+                  h2.mdl-card__title-text Portafolio
+                .mdl-card__supporting-text
+                  | Es la pagina que esta viendo ahora mismo
+                .mdl-card__actions.mdl-card--border
+                  a.mdl-button.mdl-js-button.mdl-js-ripple-effect(data-scroll, href="#header")
+                    | Ver Página
+            .col-xs-12.col-sm-6.col-md-4.col-lg-3
+              .demo-card-square.mdl-card.mdl-shadow--2dp
+                .mdl-card__title.mdl-card--expand
+                  img(src="/img/teatrocalima.png", alt="").card-image
+                  h2.mdl-card__title-text Teatro Calima
+                .mdl-card__supporting-text
+                  | Pagina Web del teatro calima realizada con PHP y laravel y base de datos MySql
+                .mdl-card__actions.mdl-card--border
+                  a.mdl-button.mdl-js-button.mdl-js-ripple-effect(href="http://teatrocalima.com.co", target="_blank")
+                    | Ver Página
+            .col-xs-12.col-sm-6.col-md-4.col-lg-3
+              .demo-card-square.mdl-card.mdl-shadow--2dp
+                .mdl-card__title.mdl-card--expand
+                  img(src="/img/indomotech.png", alt="").card-image
+                  h2.mdl-card__title-text InDomoTech
+                .mdl-card__supporting-text
+                  | Pagina Web realizada con el framework foundation 6 for sites
+                .mdl-card__actions.mdl-card--border
+                  a.mdl-button.mdl-js-button.mdl-js-ripple-effect(href="http://indomotech.com", target="_blank")
+                    | Ver Página
+            .col-xs-12.col-sm-6.col-md-4.col-lg-3
+              .demo-card-square.mdl-card.mdl-shadow--2dp
+                .mdl-card__title.mdl-card--expand
+                  img(src="/img/tecnicopy.png", alt="").card-image
+                  h2.mdl-card__title-text Tecnicopy
+                .mdl-card__supporting-text
+                  | Propuesta para empresa realizada con framework foundation 6 (Nota: Página no oficial)
+                .mdl-card__actions.mdl-card--border
+                  a.mdl-button.mdl-js-button.mdl-js-ripple-effect(href="https://henrytabima.github.io/tecnicopy-page/", target="_blank")
+                    | Ver Página
+
 
   include templates/footer

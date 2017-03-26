@@ -1,10 +1,12 @@
 smoothScroll.init()
 
-var element = document.querySelector('.chart')
-new EasyPieChart(element, {
-  barColor: "#673AB7",
-  lineWidth: 6,
-  scaleColor: false
+var el = document.querySelectorAll('.chart')
+el.forEach(function (element, index) {
+  new EasyPieChart(element, {
+    barColor: "#673AB7",
+    lineWidth: 5,
+    scaleColor: false
+  })
 })
 
 var botonUp = document.getElementById('volver-arriba')
