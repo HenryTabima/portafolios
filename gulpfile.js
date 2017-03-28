@@ -78,9 +78,18 @@ gulp.task('php', function () {
     .pipe(gulp.dest('site/php'))
 })
 
-gulp.task('assets', ['images', 'fonts', 'php'])
+gulp.task('otros', function () {
+  gulp.src('src/assets/*.*')
+    .pipe(gulp.dest('site'))
+})
+
+gulp.task('assets', ['images', 'fonts', 'php', 'otros'])
 
 gulp.task('serve', ['build'], function () {
+    browserSync.init(['site/css/*.css', 'site/js/*.js', 'site/*.html'], {server: {baseDir: './site/'}})
+})
+
+gulp.task('serve:production', ['build:production'], function () {
     browserSync.init(['site/css/*.css', 'site/js/*.js', 'site/*.html'], {server: {baseDir: './site/'}})
 })
 
@@ -88,9 +97,17 @@ gulp.task('watch', ['serve'], function () {
   gulp.watch(['src/styles/**/*.scss'], ['sass'])
   gulp.watch(['src/views/**/*.pug'], ['views'])
   gulp.watch(['src/scripts/**/*.js'], ['webpack', 'concat'])
+  gulp.watch(['src/assets/**/*'], ['assets'])
+})
+
+gulp.task('watch:production', ['serve:production'], function () {
+  gulp.watch(['src/styles/**/*.scss'], ['sass'])
+  gulp.watch(['src/views/**/*.pug'], ['views'])
+  gulp.watch(['src/scripts/**/*.js'], ['webpack', 'concat'])
+  gulp.watch(['src/assets/**/*'], ['assets'])
 })
 
 gulp.task('build', ['set-development', 'views', 'sass', 'webpack', 'concat', 'assets'])
 gulp.task('build:production', ['set-production', 'views', 'sass', 'webpack', 'concat', 'assets'])
 
-gulp.task('default', ['watch'])
+gulp.task('default', ['watch:production'])

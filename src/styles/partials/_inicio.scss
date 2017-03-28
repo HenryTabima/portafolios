@@ -79,18 +79,22 @@ header {
       }
     }
   }
-  figure.foto {
-    margin: 0;
-    border-radius: 50%;
-    width: 180px;
+  figure {
     position: relative;
-    img{
+    margin: 0;
+    .foto {
+      margin: 0;
+      width: 180px;
       position: absolute;
       left: 50vw;
       transform: translateX(-50%) translateY(-50%);
-      width: 100%;
       border: 5px solid white;
       border-radius: 50%;
+      -webkit-border-radius: 50%;
+      overflow: hidden;
+      img{
+        width: 100%;
+      }
     }
   }
   .intro {
@@ -377,7 +381,7 @@ section.main-content {
       }
     }
     .mdl-card__supporting-text {
-      height: 64px;
+      min-height: 64px;
       text-align: justify;
       width: auto;
       background-color: $main-color;
